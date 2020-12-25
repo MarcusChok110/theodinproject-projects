@@ -1,108 +1,27 @@
-<script>
-
-    game();
-
-    function game() {
-
-        let playerScore = 0;
-        let computerScore = 0;
-
-        for (let i = 0; i < 5; i++) {
-
-            console.log(
-                `The current score is:
-                You: ${playerScore}
-                Computer: ${computerScore}
-                There are ${5-i} rounds left.`
-                );
-
-            let playerChoice = prompt("Please type rock, paper, or scissors.");
-            let computerChoice = computerPlay();
-
-            let outcome = playRound(playerChoice, computerChoice);
-
-            if (outcome === "You Win!") {
-                playerScore++;
-            } else if (outcome === "You Lose!") {
-                computerScore++;
-            }
-
-            console.log(
-                `You chose: ${playerChoice}
-                The computer chose: ${computerChoice}`
-            );
-            console.log(outcome);
-
-        }
-
-        console.log(
-            `The final result is:
-                You: ${playerScore}
-                Computer: ${computerScore}`
-        );
-
-        if (playerScore < computerScore) {
-            console.log("You lost! Better luck next time!");
-        } else if (playerScore > computerScore) {
-            console.log("You won! Amazing job!");
-        } else {
-            console.log("It was a tie! Great game!");
-        }
-
-    }
-
-    function computerPlay() {
-        let choice = Math.floor(Math.random() * 3);
-        switch (choice) {
-            case 0:
-            return "Rock";
-            break;
-            case 1:
-            return "Paper";
-            break;
-            case 2:
-            return "Scissors";
-            break;
-        }
-    }
-
-    function playRound(playerSelection, computerSelection) {
-        if (playerSelection.toLowerCase() === "rock") {
-            switch (computerSelection) {
-                case "Rock":
-                    return "It's a tie!"
-                    break;
-                case "Paper":
-                    return "You Lose!";
-                    break;
-                case "Scissors":
-                    return "You Win!"
-                    break;
-            }
-        } else if (playerSelection.toLowerCase() === "paper") {
-            switch (computerSelection) {
-                case "Rock":
-                    return "You Win!"
-                    break;
-                case "Paper":
-                    return "It's a tie!";
-                    break;
-                case "Scissors":
-                    return "You Lose!"
-                    break;
-            }
-        } else if (playerSelection.toLowerCase() === "scissors") {
-            switch (computerSelection) {
-                case "Rock":
-                    return "You Lose!"
-                    break;
-                case "Paper":
-                    return "You Win!";
-                    break;
-                case "Scissors":
-                    return "It's a tie!"
-                    break;
-            }
-        }
-    }
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic RPS</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Against an A.I.!</h1>
+    <div id="score">
+        <ul>
+            <li id="player">Player: 0</li>
+            <li id="computer">Computer: 0</li>
+        </ul>
+    </div>
+    <div id="options">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <br>
+    <div id="results">
+        <ul id="results-list"></ul>
+    </div>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
