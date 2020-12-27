@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#title {
+    text-align: center;
+}
+
+#display {
+    grid-column: 1 / -1;
+    margin: 4px 4px;
+    padding: 4px 8px;
+    font-size: 64px;
+    text-align: right;
+    background-color: silver;
+    border-radius: 16px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+.btn {
+    margin: 1px;
+    text-align: center;
+    padding: 32px 16px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.btn:hover {
+    max-height: 100%;
+    font-weight: bolder;
+    background-color: aqua;
+}
+
+.op {
+    background-color: orange;
+}
