@@ -1,0 +1,61 @@
+body {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    text-align: center;
+}
+
+#library {
+    /* */
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    background-color: white;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.book-element {
+    margin: 1px;
+    text-align: center;
+    padding: 32px 16px;
+    background-color: white;
+    border-radius: 16px;
+    border: 2px solid black;
+}
+
+#add {
+    margin: 32px auto;
+}
+
+#book-form {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    margin: auto auto 16px auto;
+}
